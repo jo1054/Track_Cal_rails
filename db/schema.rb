@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171206055256) do
+ActiveRecord::Schema.define(version: 20171210223141) do
+
+  create_table "heatsheets", force: :cascade do |t|
+    t.string "school_club"
+    t.string "last_name"
+    t.string "first_name"
+    t.float "entry_mark"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

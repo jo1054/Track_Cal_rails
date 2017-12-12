@@ -1,0 +1,37 @@
+<%= form_with(model: heatsheet, local: true) do |form| %>
+  <% if heatsheet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(heatsheet.errors.count, "error") %> prohibited this heatsheet from being saved:</h2>
+
+      <ul>
+      <% heatsheet.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :school_club %>
+    <%= form.text_field :school_club, id: :heatsheet_school_club %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name, id: :heatsheet_last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name, id: :heatsheet_first_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :entry_mark %>
+    <%= form.text_field :entry_mark, id: :heatsheet_entry_mark %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,84 @@
+
+  
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+
+
+
+  <style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 20px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Heatsheets</h1>
+<div class="media">
+ <div class="media-body">
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>School club</th>
+      <th>Last name</th>
+      <th>First name</th>
+      <th>Entry mark</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @heatsheets.each do |heatsheet| %>
+      <tr>
+        <td><%= heatsheet.school_club %></td>
+        <td><%= heatsheet.last_name %></td>
+        <td><%= heatsheet.first_name %></td>
+        <td><%= heatsheet.entry_mark %></td>
+        <td><%= link_to 'Show', heatsheet %></td>
+        <td><%= link_to 'Edit', edit_heatsheet_path(heatsheet) %></td>
+        <td><%= link_to 'Destroy', heatsheet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div>
+<br>
+
+<%= link_to 'New Competitor', new_heatsheet_path %>

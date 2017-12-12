@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>School club:</strong>
+  <%= @heatsheet.school_club %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @heatsheet.last_name %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @heatsheet.first_name %>
+</p>
+
+<p>
+  <strong>Entry mark:</strong>
+  <%= @heatsheet.entry_mark %>
+</p>
+
+<%= link_to 'Edit', edit_heatsheet_path(@heatsheet) %> |
+<%= link_to 'Back', heatsheets_path %>
