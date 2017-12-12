@@ -5,6 +5,11 @@ class HeatsheetsController < ApplicationController
   # GET /heatsheets.json
   def index
     @heatsheets = Heatsheet.all
+    respond_to do |format|
+      format.html
+      format.csv {send_data @heatsheets.to_csv}
+    end
+
   end
 
   # GET /heatsheets/1
