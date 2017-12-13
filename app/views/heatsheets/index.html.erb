@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
 
+<%= render partial: 'layouts/navbar' %>
 
 
   <style>
@@ -80,5 +81,7 @@
 </div>
 </div>
 <br>
+<p> <a class="btn btn-primary btn-lg" href="heatsheets.csv" role="button">Download heatsheet</a></p>
+
 
 <%= link_to 'New Competitor', new_heatsheet_path %>
