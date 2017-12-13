@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 gem 'coffee-script-source', '1.8.0'
 
-
+ruby '2.2.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
